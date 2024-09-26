@@ -2,9 +2,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    position: relative;
     height: 9rem;
-
     padding: 2rem 8rem;
 
     &__logo {
@@ -18,29 +17,48 @@
     &__list {
         list-style: none;
         display: flex;
-
         align-items: center;
+
+        .header__item {
+            &:hover ~ .header__item {
+                opacity: 0.3;
+            }
+
+            &:has(+ *:hover),
+            &:has(+ * + *:hover),
+            &:has(+ * + * + *:hover) {
+                opacity: 0.3;
+            }
+        }
     }
 
     &__item {
         font-size: 1.9rem;
-        color: rgb(81, 81, 81);
+        color: var(--color-grey-light-1);
         font-weight: 500;
 
-        &--green {
-            background-color: #5EC576;
-            color: rgb(25, 25, 25);
-            padding: 1rem 3rem;
-            border-radius: 50rem;
-        }
+        transition: opacity 0.3s ease, z-index 0s ease 0.3s;
 
         &:not(:last-child) {
-            margin-right: 2rem;
+            margin-right: 4rem;
         }
     }
 
     &__link {
         text-decoration: none;
         color: inherit;
+
+        &--green {
+            background-color: var(--color-green-light-1);
+            color: rgb(25, 25, 25);
+            padding: 1rem 3rem;
+            border-radius: 50rem;
+
+            transition: background-color .3s;
+
+            &:hover {
+                background-color: var(--color-green-light-2);
+            }
+        }
     }
 }
