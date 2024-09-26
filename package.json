@@ -1,0 +1,12 @@
+{
+  "name": "bankist-dom",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "sass source/stylesheets/index.scss build/stylesheets/index.css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
