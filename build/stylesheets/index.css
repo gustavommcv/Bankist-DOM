@@ -94,6 +94,7 @@ body {
   color: var(--color-green-light-2);
   font-size: 2rem;
   margin-bottom: 1.5rem;
+  text-transform: uppercase;
 }
 .main__section-title {
   font-size: 4rem;
