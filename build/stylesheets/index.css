@@ -51,6 +51,8 @@
   --color-green-light-1: #6dd485;
   --color-green-light-2: #65c27b;
   --color-grey-light-1: rgb(71, 71, 71);
+  --color-grey-dark-1: #444444;
+  --color-background: #F3F3F3;
 }
 
 * {
@@ -64,7 +66,67 @@ html {
 }
 
 body {
+  background-color: var(--color-background);
+}
+
+body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.main__section {
+  color: var(--color-grey-dark-1);
+  max-width: 125rem;
+  margin: 0 auto;
+}
+.main__section:not(:last-child) {
+  border-bottom: 1px solid grey;
+}
+
+#section-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem;
+  height: 120rem;
+}
+#section-1__title {
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+}
+#section-1__paragraph {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+}
+#section-1__button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: var(--color-green-light-2);
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid;
+}
+
+#img-1 {
+  height: 35rem;
+}
+
+.bg-green {
+  position: relative;
+}
+.bg-green::after {
+  content: "";
+  width: 116%;
+  height: 100%;
+  left: -8%;
+  z-index: -1;
+  background-color: red;
+  position: absolute;
+  background: linear-gradient(to right, rgba(94, 218, 123, 0.4666666667), #65c27b);
+  clip-path: polygon(6% 0, 100% 0%, 94% 100%, 0% 100%);
 }
 
 /*# sourceMappingURL=index.css.map */
