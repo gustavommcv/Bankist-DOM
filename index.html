@@ -25,17 +25,84 @@
 
     <main class="main">
         <section id="section-1" class="main__section">
-            <div id="section-1__description">
-                <h1 id="section-1__title">When <span class="bg-green">banking</span> meets <span class="bg-green">minimalist</span></h1>
-                <p id="section-1__paragraph">
-                    A simpler banking experience for a simpler life.
-                </p>
+            <div id="section-1__container">
+                <div id="section-1__description">
+                    <h1 id="section-1__title">When <span class="bg-green">banking</span> meets <span class="bg-green">minimalist</span></h1>
+                    <p id="section-1__paragraph">
+                        A simpler banking experience for a simpler life.
+                    </p>
+                    <button id="section-1__button">Learn more &darr;</button>
+                </div>
+                <div id="section-1__img">
+                    <img id="img-1" src="build/stylesheets/img/hero.png" alt="">
+                </div>
+            </div>
+        </section>
 
-                <button id="section-1__button">Learn more &darr;</button>
+        <section id="section-2" class="main__section">
+            <div class="main__section-header">
+                <h2 class="main__section-description">Features</h2>
+                <h3 class="main__section-title">Everything you need in a modern bank and more.</h3>
             </div>
 
-            <div id="section-1__img">
-                <img id="img-1" src="build/stylesheets/img/hero.png" alt="">
+            <div id="section-2__features">
+                <div id="section-2__row" class="main__section-row">
+                    <div id="section-2__img-container"><img id="section-2__img" src="build/stylesheets/img/digital.jpg" alt="Computer image"></div>
+
+                    <div id="section-2__row-description-container">
+                        <div id="section-2__row-description">
+                            <div class="icon-container">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-display" viewBox="0 0 16 16">
+                                  <path d="M0 4s0-2 2-2h12s2 0 2 2v6s0 2-2 2h-4q0 1 .25 1.5H11a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1h.75Q6 13 6 12H2s-2 0-2-2zm1.398-.855a.76.76 0 0 0-.254.302A1.5 1.5 0 0 0 1 4.01V10c0 .325.078.502.145.602q.105.156.302.254a1.5 1.5 0 0 0 .538.143L2.01 11H14c.325 0 .502-.078.602-.145a.76.76 0 0 0 .254-.302 1.5 1.5 0 0 0 .143-.538L15 9.99V4c0-.325-.078-.502-.145-.602a.76.76 0 0 0-.302-.254A1.5 1.5 0 0 0 13.99 3H2c-.325 0-.502.078-.602.145"/>
+                                </svg>
+                            </div>
+                              
+                            <h4 id="section-2__row-title">100% digital bank</h4>
+                            <p id="section-2__row-about">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde alias sint quos? Accusantium a fugiat porro reiciendis saepe quibusdam debitis ducimus.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="section-2__row" class="main__section-row main__section-row--inv">
+                    <div id="section-2__img-container"><img id="section-2__img" src="build/stylesheets/img/grow.jpg" alt="Computer image"></div>
+
+                    <div id="section-2__row-description-container">
+                        <div id="section-2__row-description">
+                            <div class="icon-container">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-graph-up-arrow" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5"/>
+                                  </svg>
+                            </div>
+                              
+                            <h4 id="section-2__row-title">Watch your money grow</h4>
+                            <p id="section-2__row-about">
+                                Nesciunt quos autem dolorum voluptates cum dolores dicta fuga inventore ab? Nulla incidunt eius numquam sequi iste pariatur quibusdam! 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="section-2__row" class="main__section-row">
+                    <div id="section-2__img-container"><img id="section-2__img" src="build/stylesheets/img/card.jpg" alt="Computer image"></div>
+
+                    <div id="section-2__row-description-container">
+                        <div id="section-2__row-description">
+                            <div class="icon-container">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-credit-card" viewBox="0 0 16 16">
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z"/>
+                                    <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+                                  </svg>
+                            </div>
+                              
+                            <h4 id="section-2__row-title">Free debit card included</h4>
+                            <p id="section-2__row-about">
+                                Quasi, fugit in cumque cupiditate reprehenderit debitis animi enim eveniet consequatur odit quam quos possimus assumenda dicta fuga inventore ab. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
