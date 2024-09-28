@@ -66,6 +66,14 @@
         font-size: 2.5rem;
         font-weight: 600;
         margin-bottom: 2rem;
+
+        &::before {
+            content: "“";
+            color: var(--color-green-light-2);
+            font-size: 4rem;
+            margin-right: .1rem;
+            vertical-align: middle;
+        }
     }
 
     &__testimonial-description {

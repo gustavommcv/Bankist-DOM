@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .header {
   display: flex;
   justify-content: space-between;
@@ -215,6 +216,13 @@ body {
   font-size: 2.5rem;
   font-weight: 600;
   margin-bottom: 2rem;
+}
+.main__testimonial-title::before {
+  content: "“";
+  color: var(--color-green-light-2);
+  font-size: 4rem;
+  margin-right: 0.1rem;
+  vertical-align: middle;
 }
 .main__testimonial-description {
   font-size: 2rem;
