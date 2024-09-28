@@ -9,6 +9,8 @@
         &-header {
             margin: 0 auto 8rem;
             width: 75rem;
+
+            
         }
 
         &-description, &-title {
@@ -25,6 +27,7 @@
 
         &-title {
             font-size: 4rem;
+            text-wrap: wrap;
         }
 
         &-row--inv {
@@ -94,8 +97,9 @@
 }
 
 #section-2 {
-    height: 120rem;
     padding-top: 15rem;
+    padding-bottom: 12rem;
+    padding-left: 3rem;
 
     &__features {
         width: 80%;
@@ -118,6 +122,7 @@
 
     &__img {
         width: 100%;
+        // filter: blur(1.5rem);
     }
 
     &__row-description {
@@ -151,6 +156,61 @@
 
 .icon-container svg {
     fill: #5EC576;
+    width: 24px;
+    height: 24px;
+}
+
+#section-3 {
+    padding-top: 15rem;
+    padding-bottom: 12rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    
+    &__operations {
+        display: flex;
+        align-items: center;
+        justify-content: center;    
+
+        background-color: white;
+        height: 32rem;
+        max-width: 100rem;
+
+        margin: 0 auto;
+    }
+
+    &__subtitle {
+        font-size: 2.5rem;
+        font-weight: 600;
+
+        margin-bottom: 3rem;
+    }
+
+    &__about {
+        color: var(--color-grey-light-2);
+        font-size: 1.5rem;
+        
+        text-transform: uppercase;
+        width: 600px;
+
+        line-height: 2.8rem;
+    }
+}
+
+.icon-container--yellow {
+    margin-left: -5rem;
+    margin-right: 3rem;
+    width: 70px;
+    height: 70px;
+    background-color: #FFF6CE;
+
+    align-self: flex-start;
+    margin-top: 5.6rem;
+
+    margin-bottom: 0;
+}
+
+.icon-container--yellow svg {
+    fill: #FFBB00;
     width: 24px;
     height: 24px;
 }
