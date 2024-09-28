@@ -8,13 +8,12 @@
 
         &-header {
             margin: 0 auto 8rem;
-            width: 75rem;
-
-            
+            max-width: 75rem;
         }
 
         &-description, &-title {
             font-weight: 600;
+            margin-right: 2rem;
         }
 
         &-description {
@@ -75,10 +74,14 @@
         padding-bottom: .5rem;
         border-bottom: 1px solid;
     }
+
+    &__img {
+        height: 35rem;
+    }
 }
 
 #img-1 {
-    height: 35rem;
+    height: 100%;
 }
 
 .bg-green {
@@ -160,57 +163,70 @@
     height: 24px;
 }
 
+.main__operations {
+    height: 30rem;
+    display: flex;
+    padding: 5rem;
+    background-color: white;
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
 #section-3 {
     padding-top: 15rem;
     padding-bottom: 12rem;
     padding-left: 3rem;
     padding-right: 3rem;
-    
-    &__operations {
+
+    &__buttons {
+        background: linear-gradient(to bottom, transparent 50%, white 50%);
         display: flex;
         align-items: center;
-        justify-content: center;    
+        justify-content: center;
 
-        background-color: white;
-        height: 32rem;
         max-width: 100rem;
-
         margin: 0 auto;
     }
 
-    &__subtitle {
-        font-size: 2.5rem;
-        font-weight: 600;
+    &__operations {
+        background-color: white;
 
-        margin-bottom: 3rem;
+        display: grid;
+        grid-template-columns: 70px 1fr;
+        grid-column-gap: 2rem;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    &__subtitle {
+        font-size: 2.3rem;
+        font-weight: 600;
+        grid-column: 2 / span 2;
+        text-align: left;
+        height: 5rem;
     }
 
     &__about {
         color: var(--color-grey-light-2);
         font-size: 1.5rem;
-        
-        text-transform: uppercase;
-        width: 600px;
-
-        line-height: 2.8rem;
+        line-height: 2.5rem;
+        grid-column: 2 / span 2;
+        text-align: left;
     }
 }
 
 .icon-container--yellow {
-    margin-left: -5rem;
-    margin-right: 3rem;
     width: 70px;
     height: 70px;
     background-color: #FFF6CE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
 
-    align-self: flex-start;
-    margin-top: 5.6rem;
-
-    margin-bottom: 0;
-}
-
-.icon-container--yellow svg {
-    fill: #FFBB00;
-    width: 24px;
-    height: 24px;
+    svg {
+        fill: #FFBB00;
+        width: 34px;
+        height: 34px;
+    }
 }
