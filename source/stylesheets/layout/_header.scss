@@ -12,6 +12,7 @@
     &__hmenu {
         order: 4;
         display: none !important;
+        z-index: 2;
 
         svg {
             width: 34px;
@@ -23,6 +24,13 @@
         border: none;
         background-color: transparent;
         cursor: pointer;
+    }
+
+    @include respond(phone) {
+        .header__list--active {
+            width: 100% !important;
+            right: 0 !important;
+        }
     }
 
     @include respond(tablet-landscape) {
@@ -72,7 +80,7 @@
 
         position: absolute;
         gap: 3rem;
-        top: 9rem;
+        top: 0;
         right: 1rem;
         width: 40rem;
         background-color: white;

@@ -37,6 +37,7 @@ ORDER: Base + typhography > genereal layout + grid > page layout > components
 .header__hmenu {
   order: 4;
   display: none !important;
+  z-index: 2;
 }
 .header__hmenu svg {
   width: 34px;
@@ -46,6 +47,12 @@ ORDER: Base + typhography > genereal layout + grid > page layout > components
   border: none;
   background-color: transparent;
   cursor: pointer;
+}
+@media screen and (max-width: 41.2em) {
+  .header .header__list--active {
+    width: 100% !important;
+    right: 0 !important;
+  }
 }
 @media screen and (max-width: 75em) {
   .header {
@@ -85,7 +92,7 @@ ORDER: Base + typhography > genereal layout + grid > page layout > components
   z-index: 2;
   position: absolute;
   gap: 3rem;
-  top: 9rem;
+  top: 0;
   right: 1rem;
   width: 40rem;
   background-color: white;
