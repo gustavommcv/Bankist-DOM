@@ -82,6 +82,7 @@ ORDER: Base + typhography > genereal layout + grid > page layout > components
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index: 2;
   position: absolute;
   gap: 3rem;
   top: 9rem;
@@ -376,6 +377,33 @@ body {
   height: 100%;
 }
 
+@media screen and (max-width: 75em) {
+  #img-1 {
+    display: none;
+  }
+  #section-1__container {
+    height: 80rem;
+  }
+  .bg-green {
+    border-bottom: solid 2px #6ccc83;
+  }
+  .bg-green::after {
+    display: none;
+  }
+}
+@media screen and (max-width: 41.2em) {
+  #section-1__container {
+    height: 70rem;
+  }
+  #section-1__title {
+    font-size: 4rem;
+    margin-bottom: 2.5rem;
+  }
+  #section-1__paragraph {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+  }
+}
 .bg-green {
   position: relative;
 }
@@ -384,6 +412,7 @@ body {
   width: 116%;
   height: 100%;
   left: -8%;
+  top: 0;
   z-index: -1;
   position: absolute;
   background: linear-gradient(to right, rgba(94, 218, 123, 0.4666666667), #65c27b);
