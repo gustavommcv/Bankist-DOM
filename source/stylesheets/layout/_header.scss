@@ -9,8 +9,79 @@
 
     z-index: 2;
 
-    position: sticky;
-    top: 0;
+    &__hmenu {
+        order: 4;
+        display: none !important;
+
+        svg {
+            width: 34px;
+            height: 34px;
+        }
+    }
+
+    &__button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    @include respond(tablet-landscape) {
+
+        & {
+            padding: 2rem 3rem;
+        }
+        
+        &__list {
+            display: none !important;
+        }
+
+        &__hmenu {
+            display: block !important;
+        }
+    }
+
+    @include respond(big-desktop) {
+        .header__list--active {
+            display: flex !important;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 4rem;
+            position: static;
+            width: auto;
+            background-color: transparent;
+            padding: 0;
+        }
+
+        &__hmenu {
+            display: none !important;
+        }
+
+        &__list {
+            display: flex !important;
+        }
+    }
+
+    &__list--active {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        gap: 3rem;
+        top: 9rem;
+        right: 1rem;
+        width: 40rem;
+        background-color: white;
+        padding: 2rem;
+
+        border-radius: 20px;
+    }
+
+    // Sticky header
+    // position: sticky;
+    // top: 0;
 
     &__logo {
         height: 100%;
@@ -25,17 +96,18 @@
         display: flex;
         align-items: center;
 
-        .header__item {
-            &:hover ~ .header__item {
-                opacity: 0.3;
-            }
+        // Hovering effect with only css
+        // .header__item {
+        //     &:hover ~ .header__item {
+        //         opacity: 0.3;
+        //     }
 
-            &:has(+ *:hover),
-            &:has(+ * + *:hover),
-            &:has(+ * + * + *:hover) {
-                opacity: 0.3;
-            }
-        }
+        //     &:has(+ *:hover),
+        //     &:has(+ * + *:hover),
+        //     &:has(+ * + * + *:hover) {
+        //         opacity: 0.3;
+        //     }
+        // }
     }
 
     &__item {

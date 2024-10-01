@@ -1,4 +1,30 @@
 @charset "UTF-8";
+:root {
+  --color-green-light-1: #6dd485;
+  --color-green-light-2: #65c27b;
+  --color-grey-light-1: rgb(71, 71, 71);
+  --color-grey-dark-1: #444444;
+  --color-background: #F3F3F3;
+}
+
+/*
+0 - 600px:   phone
+600 - 900px: tablet portrait
+900 - 1200px: tablet landscape
+[1200 - 1800]:  is where our normal styles apply
+1800px + : Big desktop
+*/
+/*
+$breakpoint arguement choices
+- phone
+- tablet-portrait
+- tablet-landscape
+- big-desktop
+
+ORDER: Base + typhography > genereal layout + grid > page layout > components
+
+1rem = 16px
+*/
 .header {
   display: flex;
   justify-content: space-between;
@@ -7,8 +33,63 @@
   padding: 2rem 8rem;
   background-color: rgba(243, 243, 243, 0.9450980392);
   z-index: 2;
-  position: sticky;
-  top: 0;
+}
+.header__hmenu {
+  order: 4;
+  display: none !important;
+}
+.header__hmenu svg {
+  width: 34px;
+  height: 34px;
+}
+.header__button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+@media screen and (max-width: 75em) {
+  .header {
+    padding: 2rem 3rem;
+  }
+  .header__list {
+    display: none !important;
+  }
+  .header__hmenu {
+    display: block !important;
+  }
+}
+@media screen and (min-width: 75.1em) {
+  .header .header__list--active {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 4rem;
+    position: static;
+    width: auto;
+    background-color: transparent;
+    padding: 0;
+  }
+  .header__hmenu {
+    display: none !important;
+  }
+  .header__list {
+    display: flex !important;
+  }
+}
+.header__list--active {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  gap: 3rem;
+  top: 9rem;
+  right: 1rem;
+  width: 40rem;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 20px;
 }
 .header__logo {
   height: 100%;
@@ -20,12 +101,6 @@
   list-style: none;
   display: flex;
   align-items: center;
-}
-.header__list .header__item:hover ~ .header__item {
-  opacity: 0.3;
-}
-.header__list .header__item:has(+ *:hover), .header__list .header__item:has(+ * + *:hover), .header__list .header__item:has(+ * + * + *:hover) {
-  opacity: 0.3;
 }
 .header__item {
   font-size: 1.9rem;
@@ -98,14 +173,6 @@
 .footer__copyright {
   font-size: 1.7rem;
   color: rgb(135, 135, 135);
-}
-
-:root {
-  --color-green-light-1: #6dd485;
-  --color-green-light-2: #65c27b;
-  --color-grey-light-1: rgb(71, 71, 71);
-  --color-grey-dark-1: #444444;
-  --color-background: #F3F3F3;
 }
 
 .button {

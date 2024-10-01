@@ -9,11 +9,25 @@
 </head>
 <body>
     <header class="header">
+
+        <div class="header__hmenu"><button class="header__button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+              </svg>
+        </button></div>
+
         <div class="header__logo">
-            <img class="header__logo-img" src="build/stylesheets/img/logo.png" alt="Logo">
+            <!-- <img class="header__logo-img" src="build/stylesheets/img/logo.png" alt="Logo"> -->
+
+            <picture>
+                <source media="(max-width: 590px)" srcset="build/stylesheets/img/small-logo.png" />
+                <source media="(min-width: 591px)" srcset="build/stylesheets/img/logo.png" />
+                <img class="header__logo-img" src="build/stylesheets/img/logo.png" alt="Logo">
+              </picture>
         </div>
 
         <div class="header__nav">
+            
             <ul class="header__list">
                 <li class="header__item"><a class="header__link" href="#">Features</a></li>
                 <li class="header__item"><a class="header__link" href="">Operations</a></li>
@@ -207,5 +221,7 @@
             </div>
         </section>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
