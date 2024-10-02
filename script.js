@@ -34,3 +34,53 @@ document.addEventListener('keydown', function(event) {
         blurContainer.classList.toggle('active');
     }
 });
+
+// LECTURES
+
+// Selecting elements
+// console.log(document.documentElement);
+// console.log(document.body);
+// console.log(document.head);
+
+// console.log(document.querySelector('.header'));
+// console.log(document.querySelectorAll('.main__section'));
+
+// console.log(document.getElementById('section-1'));
+
+// console.log(document.getElementsByTagName('button'));
+
+// console.log(document.getElementsByClassName('main__section'));
+
+// Creating and inserting elements
+// .insertAdjacentHTML
+
+const header = document.querySelector('.body');
+
+const message = document.createElement('div');
+message.classList.add('cookie-message');
+// message.textContent = "We use cookies for improve functionality and analytics";
+message.innerHTML = `We use cookies for improve functionality and analytics. <button class="button button-green button-cookie">Got it!</button>`;
+
+// First child
+// document.body.prepend(message);
+
+// Last child
+document.body.append(message);
+
+// Before body as a sibling
+// document.body.before(message);
+
+// after body as a sibling
+// document.body.after(message);
+
+// Delete elementts
+const cookieButton = document.querySelector('.button-cookie');
+
+cookieButton.addEventListener('click', function() {
+
+    //Old way
+    // message.parentElement.removeChild(message)
+
+    // New way
+    message.remove();
+});

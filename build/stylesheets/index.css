@@ -452,7 +452,7 @@ body {
     display: none;
   }
   #section-1__container {
-    height: 80rem;
+    height: 90rem;
   }
   .bg-green {
     border-bottom: solid 2px #6ccc83;
@@ -462,9 +462,6 @@ body {
   }
 }
 @media screen and (max-width: 41.2em) {
-  #section-1__container {
-    height: 70rem;
-  }
   #section-1__title {
     font-size: 4rem;
     margin-bottom: 2.5rem;
@@ -690,6 +687,26 @@ body {
   .main__slider {
     padding-left: 3rem;
   }
+}
+.cookie-message {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: white;
+  color: #777777;
+  font-size: 1.5rem;
+  font-weight: 400;
+  border-radius: 20px;
+  position: fixed;
+  bottom: 0;
+  padding: 1rem;
+}
+
+.button-cookie {
+  margin-right: 0;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 /*# sourceMappingURL=index.css.map */
