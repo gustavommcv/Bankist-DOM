@@ -8,6 +8,24 @@
     <link rel="stylesheet" href="build/stylesheets/index.css">
 </head>
 <body>
+    <div class="blur-container"></div>
+
+    <div class="open-account-menu hidden">
+        <h5 class="open-account-menu__title">Open your bank account in just <span class="bg-green">5 minutes</span></h5>
+        <form class="open-account-menu__form" action="">
+            <label class="open-account-menu__label" for="f-name">First Name</label>
+            <input class="open-account-menu__input" type="text" name="f-name" id="f-name">
+
+            <label class="open-account-menu__label" for="l-name">Last Name</label>
+            <input class="open-account-menu__input" type="text" name="l-name" id="l-name">
+
+            <label class="open-account-menu__label" for="email">Email Address</label>
+            <input class="open-account-menu__input" type="email" name="email" id="email">
+
+            <button class="open-account-menu__button button button-green" type="submit">Next step &rarr;</button>
+        </form>
+    </div>
+
     <header class="header">
 
         <div class="header__hmenu"><button class="header__button">
@@ -32,7 +50,7 @@
                 <li class="header__item"><a class="header__link" href="#">Features</a></li>
                 <li class="header__item"><a class="header__link" href="">Operations</a></li>
                 <li class="header__item"><a class="header__link" href="">Testimonials</a></li>
-                <li class="header__item"><a class="header__link header__link--green" href="">Open account</a></li>
+                <li class="header__item"><a class="header__link header__link--green header__link--open-acc" href="">Open account</a></li>
             </ul>
         </div>
     </header>
