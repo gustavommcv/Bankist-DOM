@@ -630,7 +630,7 @@ body {
     margin-right: 0;
   }
   .main__operations {
-    width: 50rem;
+    max-width: 80rem;
     display: flex !important;
     align-items: center;
     justify-content: center;
@@ -642,6 +642,7 @@ body {
     gap: 3rem;
     align-items: center;
     justify-content: center;
+    width: 100%;
   }
 }
 .icon-container--yellow {
@@ -663,6 +664,24 @@ body {
   padding-top: 15rem;
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.main__dots {
+  padding-left: 0rem;
+  margin: 4rem auto 8rem auto !important;
+}
+
+@media screen and (max-width: 940px) {
+  #section-4 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .main__slider-button {
+    display: none;
+  }
+  .main__slider {
+    padding-left: 3rem;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
