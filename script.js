@@ -6,17 +6,18 @@ hamburguerMenu.addEventListener('click', () => {
     headerList.classList.toggle('header__list--active');
 });
 
-// Open account button
-const openAccountButton = document.querySelector('.header__link--open-acc');
+// Open account buttons
 const openAccountMenu = document.querySelector('.open-account-menu');
 const blurContainer = document.querySelector('.blur-container');
 
-openAccountButton.addEventListener('click', (e) => {
+const openAccountButtons = document.querySelectorAll('.open-account-btn');
+
+openAccountButtons.forEach(btn => btn.addEventListener('click', (e) => {
     e.preventDefault();
 
     openAccountMenu.classList.toggle('hidden');
     blurContainer.classList.toggle('active');
-});
+}));
 
 blurContainer.addEventListener('click', (e) => {
     // Clicking outside the menu to close it
