@@ -272,6 +272,14 @@ ORDER: Base + typhography > genereal layout + grid > page layout > components
   display: block;
 }
 
+@media screen and (max-width: 615px) {
+  .open-account-menu {
+    width: 40rem;
+  }
+  .open-account-menu__title {
+    font-size: 2.5rem;
+  }
+}
 * {
   margin: 0px;
   padding: 0px;
