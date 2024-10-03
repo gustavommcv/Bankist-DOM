@@ -69,6 +69,30 @@ document.querySelector('.header__list').addEventListener('click', function(e) {
     }
 });
 
+// Tabbed component
+const tabs = document.querySelectorAll('.operations__tab');
+const tabsContainer = document.querySelector('#section-3__buttons');
+const tabsContent = document.querySelectorAll('.operation__content');
+
+tabsContainer.addEventListener('click', function(e) {
+    const clicked = e.target.closest('.operations__tab');
+    
+    console.log(clicked);
+
+    if (!clicked) return;
+
+    tabs.forEach(t => t.classList.remove('operations__tab--active'));
+
+    clicked.classList.add('operations__tab--active');
+
+    console.log(clicked.getAttribute('data-tab'));
+
+    // Activate content area
+    tabsContent.forEach(c => c.classList.remove('operation__content--active'));
+
+    document.querySelector(`.operation__content--${clicked.getAttribute('data-tab')}`).classList.add('operation__content--active');
+});
+
 ///////////////////////////////////////////
 // LECTURES
 ///////////////////////////////////////////

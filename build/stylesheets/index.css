@@ -581,6 +581,19 @@ body {
   margin: 0 auto;
 }
 
+.operation__content {
+  display: none !important;
+}
+
+.operation__content--active {
+  display: grid !important;
+}
+
+.operations__tab--active {
+  transform: translateY(-0.7rem);
+  transition: transform 0.5s ease;
+}
+
 #section-3 {
   padding-top: 15rem;
   padding-bottom: 12rem;
@@ -641,13 +654,16 @@ body {
     justify-content: center;
     border-radius: 20px;
   }
-  #section-3__operations {
+  .operation__content--active {
     display: flex !important;
     flex-direction: column;
-    gap: 3rem;
+    gap: 5rem;
     align-items: center;
     justify-content: center;
     width: 100%;
+  }
+  .operations__tab--active {
+    transform: translateX(2rem);
   }
 }
 .icon-container--yellow {
