@@ -84,3 +84,32 @@ cookieButton.addEventListener('click', function() {
     // New way
     message.remove();
 });
+
+// Styles
+message.style.backgroundColor = '#37383d';
+// message.style.width = '40rem';
+
+// console.log(getComputedStyle(message).height);
+
+// message.style.height = Number.parseFloat(getComputedStyle(message).height, 10) + 40 + 'px';
+
+// console.log(getComputedStyle(message).height);
+
+// document.documentElement.style.setProperty('--color-green-light-1', 'orangered');
+
+
+// Atributes
+// const logo = document.querySelector('.nav__logo');
+
+// console.log(logo.alt); // Standart property
+// console.log(logo.src); // Standart property
+// console.log(logo.className); // Standart property
+
+// console.log(logo.designer); // Non-standard property (do not work)
+// console.log(logo.getAttribute('designer')); // this works
+
+// logo.alt = 'Bealtiful minimalist logo';
+// logo.setAttribute('company', 'Bankist');
+
+// console.log(logo.src);
+// console.log(logo.getAttribute('src'));
