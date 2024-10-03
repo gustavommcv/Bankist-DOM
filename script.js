@@ -47,34 +47,3 @@ btnScrollTo.addEventListener('click', (e) => {
 ///////////////////////////////////////////
 // LECTURES
 ///////////////////////////////////////////
-
-// const h1 = document.querySelector('h1');
-
-// const alertH1 = function (e) {
-//     alert('addEventListener: Great! You are reading the heading :D');
-
-//     h1.removeEventListener('mouseenter', alertH1);
-// }
-
-// h1.addEventListener('mouseenter', alertH1);
-
-// rgb(255,255,255);
-// const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
-
-// const randomColor = () => `rgb(${randomInt(0, 255)},${randomInt(0, 255)},${randomInt(0, 255)})`;
-
-// // console.log(randomColor());
-
-// document.querySelector('.header__link').addEventListener('click', (e) => {
-//     document.querySelector('.header__link').style.backgroundColor = randomColor();
-
-//     e.stopPropagation();
-// });
-
-// document.querySelector('.header__list').addEventListener('click', (e) => {
-//     document.querySelector('.header__list').style.backgroundColor = randomColor();
-// });
-
-// document.querySelector('.header__nav').addEventListener('click', (e) => {
-//     document.querySelector('.header__nav').style.backgroundColor = randomColor();
-// });
