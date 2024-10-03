@@ -35,7 +35,45 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
+// Smooth scrolling
+const btnScrollTo = document.querySelector('.btn--scroll-to');
+const section2 = document.querySelector('#section-2');
+
+btnScrollTo.addEventListener('click', (e) => {
+
+    // OLD WAY FOR DOING IT
+    // const s2coords = section2.getBoundingClientRect();
+
+    // // Scrolling
+    // // window.scrollTo(
+    // //     s2coords.left + window.scrollX, 
+    // //     s2coords.top + window.scrollY
+    // // );
+
+    // // Smooth scrolling
+    // window.scrollTo({
+    //     left: s2coords.left + window.scrollX,
+    //     top: s2coords.top + window.scrollY,
+    //     behavior: 'smooth',
+    // });
+
+    // NEW WAY OF DOING IT
+    section2.scrollIntoView({behavior: 'smooth'});
+
+    // console.log(s2coords);
+
+    // console.log(e.target.getBoundingClientRect());
+
+    // console.log('Current scroll (X/Y)', window.scrollX, window.scrollY);
+
+    // console.log('Height/width viewport', document.documentElement.clientHeight, document.documentElement.clientWidth);
+});
+
+
+///////////////////////////////////////////
 // LECTURES
+///////////////////////////////////////////
+
 
 // Selecting elements
 // console.log(document.documentElement);
@@ -54,18 +92,18 @@ document.addEventListener('keydown', function(event) {
 // Creating and inserting elements
 // .insertAdjacentHTML
 
-const header = document.querySelector('.body');
+// const header = document.querySelector('.body');
 
-const message = document.createElement('div');
-message.classList.add('cookie-message');
-// message.textContent = "We use cookies for improve functionality and analytics";
-message.innerHTML = `We use cookies for improve functionality and analytics. <button class="button button-green button-cookie">Got it!</button>`;
+// const message = document.createElement('div');
+// message.classList.add('cookie-message');
+// // message.textContent = "We use cookies for improve functionality and analytics";
+// message.innerHTML = `We use cookies for improve functionality and analytics. <button class="button button-green button-cookie">Got it!</button>`;
 
-// First child
-// document.body.prepend(message);
+// // First child
+// // document.body.prepend(message);
 
-// Last child
-document.body.append(message);
+// // Last child
+// document.body.append(message);
 
 // Before body as a sibling
 // document.body.before(message);
@@ -74,19 +112,19 @@ document.body.append(message);
 // document.body.after(message);
 
 // Delete elementts
-const cookieButton = document.querySelector('.button-cookie');
+// const cookieButton = document.querySelector('.button-cookie');
 
-cookieButton.addEventListener('click', function() {
+// cookieButton.addEventListener('click', function() {
 
-    //Old way
-    // message.parentElement.removeChild(message)
+//     //Old way
+//     // message.parentElement.removeChild(message)
 
-    // New way
-    message.remove();
-});
+//     // New way
+//     message.remove();
+// });
 
-// Styles
-message.style.backgroundColor = '#37383d';
+// // Styles
+// message.style.backgroundColor = '#37383d';
 // message.style.width = '40rem';
 
 // console.log(getComputedStyle(message).height);
