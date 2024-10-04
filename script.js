@@ -111,6 +111,47 @@ nav.addEventListener('mouseover', handleHover.bind(0.5));
 
 nav.addEventListener('mouseout', handleHover.bind(1));
 
+// Sticky navigation
+// Bad way (performance)
+// const initialCoords = section2.getBoundingClientRect();
+
+// window.addEventListener('scroll', function(e) {
+//     if (window.scrollY > initialCoords.top) nav.classList.add('sticky'); else nav.classList.remove('sticky');
+// });
+
+// Good way (Intersection Observer API)
+
+// const obsCallBack = function(entries, observer) {
+//     entries.forEach(entry => console.log(entry));
+// }
+
+// const obsOptions = {
+//     root: null,
+//     threshold: [0, 0.2]
+// }
+
+// const observer = new IntersectionObserver(obsCallBack, obsOptions);
+
+// observer.observe(section2);
+
+const section1 = document.querySelector('#section-1');
+const headerHeight = document.querySelector('.header').getBoundingClientRect().height;
+
+const stickyNav = function(entries) {
+    const [entry] = entries;
+
+    if (!entry.isIntersecting) nav.classList.add('sticky'); 
+    else nav.classList.remove('sticky');
+}
+
+const headerObserver = new IntersectionObserver(stickyNav, {
+    root: null,
+    threshold: 0,
+    rootMargin: `-${headerHeight}px`
+});
+
+headerObserver.observe(section1);
+
 ///////////////////////////////////////////
 // LECTURES
 ///////////////////////////////////////////
