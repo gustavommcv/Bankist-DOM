@@ -104,6 +104,7 @@ ORDER: Base + typhography > genereal layout + grid > page layout > components
 }
 .header__logo-img {
   height: 100%;
+  transition: opacity 0.3s;
 }
 .header__list {
   list-style: none;
@@ -114,6 +115,7 @@ ORDER: Base + typhography > genereal layout + grid > page layout > components
   font-size: 1.9rem;
   color: var(--color-grey-light-1);
   font-weight: 500;
+  transition: opacity 0.3s;
   transition: opacity 0.3s ease, z-index 0s ease 0.3s;
 }
 .header__item:not(:last-child) {
@@ -122,13 +124,14 @@ ORDER: Base + typhography > genereal layout + grid > page layout > components
 .header__link {
   text-decoration: none;
   color: inherit;
+  transition: opacity 0.3s;
 }
 .header__link--green {
   background-color: var(--color-green-light-1);
   color: rgb(25, 25, 25);
   padding: 1rem 3rem;
   border-radius: 50rem;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, opacity 0.3s;
 }
 .header__link--green:hover {
   background-color: var(--color-green-light-2);

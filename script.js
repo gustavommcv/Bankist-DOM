@@ -76,8 +76,6 @@ const tabsContent = document.querySelectorAll('.operation__content');
 
 tabsContainer.addEventListener('click', function(e) {
     const clicked = e.target.closest('.operations__tab');
-    
-    console.log(clicked);
 
     if (!clicked) return;
 
@@ -85,13 +83,33 @@ tabsContainer.addEventListener('click', function(e) {
 
     clicked.classList.add('operations__tab--active');
 
-    console.log(clicked.getAttribute('data-tab'));
-
     // Activate content area
     tabsContent.forEach(c => c.classList.remove('operation__content--active'));
 
     document.querySelector(`.operation__content--${clicked.getAttribute('data-tab')}`).classList.add('operation__content--active');
 });
+
+// Menu fade animation
+const handleHover = function(e) {
+    if (e.target.classList.contains('header__link')) {
+        const link = e.target;
+        const siblings = link.closest('.header').querySelectorAll('.header__link');
+        const logo = link.closest('.header').querySelector('img');
+    
+        siblings.forEach(el => {
+            if (el !== link) {
+                el.style.opacity = this;
+            }
+            logo.style.opacity = this;
+        });
+    }
+}
+
+const nav = document.querySelector('.header');
+
+nav.addEventListener('mouseover', handleHover.bind(0.5));
+
+nav.addEventListener('mouseout', handleHover.bind(1));
 
 ///////////////////////////////////////////
 // LECTURES
