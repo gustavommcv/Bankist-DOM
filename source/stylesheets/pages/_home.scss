@@ -1,11 +1,18 @@
-.main {
+.section--hidden {
+    opacity: 0 !important;
+}
 
+.section {
+    transition: translate 2s, opacity 1s;
+}
+
+.main {
     color: var(--color-grey-light-1);
 
     &__section {
         color: var(--color-grey-dark-1);
         width: 100%;
-
+        
         &-header {
             margin: 0 auto 8rem;
             max-width: 75rem;
