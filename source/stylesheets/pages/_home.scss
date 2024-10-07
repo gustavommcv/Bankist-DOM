@@ -192,6 +192,7 @@
 @include respond(tablet-landscape) {
     #img-1 {
         display: none;
+
     }
 
     #section-1__container {
@@ -261,8 +262,10 @@
 
     &__img {
         width: 100%;
-        // filter: blur(1.5rem);
+        transition: filter 1.2s ease;
     }
+
+    .img--blur { filter: blur(1.5rem); }
 
     &__row-description {
         width: 80%;

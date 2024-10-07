@@ -524,6 +524,10 @@ body {
 }
 #section-2__img {
   width: 100%;
+  transition: filter 1.2s ease;
+}
+#section-2 .img--blur {
+  filter: blur(1.5rem);
 }
 #section-2__row-description {
   width: 80%;

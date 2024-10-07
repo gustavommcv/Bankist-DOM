@@ -157,7 +157,6 @@ const allSections = document.querySelectorAll('.section');
 
 const revealSection = function(entries, observer) {
     const [entry] = entries;
-    console.log(entry);
 
     if (!entry.isIntersecting) {
         return;
@@ -176,6 +175,27 @@ allSections.forEach(function(section) {
     sectionObserver.observe(section);
     section.classList.add('section--hidden');
 });
+
+// Lazy loading images
+const imgTargets = document.querySelectorAll('.img--blur');
+
+const loadIMG = function(entries, observer) {
+    const [entry] = entries;
+
+    if (!entry.isIntersecting) return;
+
+    entry.target.classList.remove('img--blur');
+
+    observer.unobserve(entry.target);
+}
+
+const imgObserver = new IntersectionObserver(loadIMG, {
+    root: null,
+    threshold: 0,
+    rootMargin: '200px'
+});
+
+imgTargets.forEach(img => imgObserver.observe(img));
 
 ///////////////////////////////////////////
 // LECTURES
