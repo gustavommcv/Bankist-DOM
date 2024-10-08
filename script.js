@@ -274,3 +274,8 @@ dotContainer.addEventListener('click', function(e) {
 ///////////////////////////////////////////
 // LECTURES
 ///////////////////////////////////////////
+
+// Lifecycle DOM Events
+window.addEventListener('beforeunload', function(e) {
+    e.preventDefault();
+})
